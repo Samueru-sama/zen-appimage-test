@@ -25,7 +25,7 @@ jobs:
 
     - name: Make AppImage
       run: |
-        sudo apt install wget tar dconf-gsettings-backend p11-kit-modules libgtk-3-0t64 libgdk-pixbuf-2.0-0 libasound2 \
+        sudo apt install wget tar dconf-gsettings-backend p11-kit-modules libgtk-3-0t64 libgdk-pixbuf-2.0-0 libasound2t64 \
           libpulse0 libegl-mesa0 libxcb-dri3-0 libxcb-dri2-0 libxcursor1 libxinerama1 libxcb-glx0 libxcb-icccm4 libpci3 zsync 
         chmod +x ./*-appimage.sh
         ./*-appimage.sh
