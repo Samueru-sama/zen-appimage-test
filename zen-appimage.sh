@@ -35,12 +35,10 @@ chmod +x ./sharun-aio
 	./bin/lib*                          \
 	"$SYSLIBS"/lib*GL*                  \
 	"$SYSLIBS"/dri/*                    \
-	"$SYSLIBS"/vdpau/*                  \
 	"$SYSLIBS"/libpci.so*               \
 	"$SYSLIBS"/libxcb-*                 \
 	"$SYSLIBS"/libXcursor.so*           \
 	"$SYSLIBS"/libXinerama*             \
-	"$SYSLIBS"/libelogind.so*           \
 	"$SYSLIBS"/libwayland*              \
 	"$SYSLIBS"/libnss*                  \
 	"$SYSLIBS"/libsoftokn3.so           \
