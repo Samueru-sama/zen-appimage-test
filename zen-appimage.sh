@@ -2,14 +2,14 @@
 
 set -eux
 
-ZEN_URL=$(wget -q --retry-connrefused --tries=30 \
-	https://api.github.com/repos/zen-browser/desktop/releases -O - \
-	| sed 's/[()",{} ]/\n/g' | grep -oi "https.*linux-$ARCH.tar.xz$" | head -1)
-
 export ARCH="$(uname -m)"
 export APPIMAGE_EXTRACT_AND_RUN=1
 export VERSION="$(echo "$ZEN_URL" | awk -F'-|/' 'NR==1 {print $(NF-2)}')"
 echo "$VERSION" > ~/version
+
+ZEN_URL=$(wget -q --retry-connrefused --tries=30 \
+	https://api.github.com/repos/zen-browser/desktop/releases -O - \
+	| sed 's/[()",{} ]/\n/g' | grep -oi "https.*linux-$ARCH.tar.xz$" | head -1)
 
 UPINFO="gh-releases-zsync|$(echo "$GITHUB_REPOSITORY" | tr '/' '|')|latest|*$ARCH.AppImage.zsync"
 SHARUN="https://github.com/VHSgunzo/sharun/releases/latest/download/sharun-$ARCH-aio"
