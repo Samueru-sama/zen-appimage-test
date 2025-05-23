@@ -32,6 +32,7 @@ chmod +x ./sharun-aio
 	./bin/zen*                          \
 	./bin/glxtest                       \
 	./bin/vaapitest                     \
+	./bin/pingsender                    \
 	./bin/lib*                          \
 	"$SYSLIBS"/lib*GL*                  \
 	"$SYSLIBS"/dri/*                    \
