@@ -59,7 +59,7 @@ chmod +x ./sharun-aio
 rm -f ./sharun-aio
 
 # Zen needs ffmpeg libs next to the binary to use them, otherwise it uses the ones of the host
-cp -v ./shared/lib/libav* ./bin
+ln -sr ./lib/lib* ./bin || true
 
 # Prepare sharun
 echo "Preparing sharun..."
