@@ -68,6 +68,7 @@ CURRENTDIR="$(dirname "$(readlink -f "$0")")"
 export PATH="${CURRENTDIR}:${PATH}"
 export MOZ_LEGACY_PROFILES=1          # Prevent per installation profiles
 export MOZ_APP_LAUNCHER="${APPIMAGE}" # Allows setting as default browser
+export LIBVA_DRIVERS_PATH="${CURRENTDIR}/shared/lib:${CURRENTDIR}/shared/lib/dri"
 exec "${CURRENTDIR}/bin/zen" "$@"' > ./AppRun
 chmod +x ./AppRun
 ./sharun -g
